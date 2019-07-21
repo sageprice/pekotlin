@@ -1,7 +1,7 @@
 import kotlin.math.sqrt
 
 /** https://projecteuler.net/problem=7 brute force */
-fun main(args: Array<String>) {
+fun main() {
   var pCount = 1
   var p = 1
 

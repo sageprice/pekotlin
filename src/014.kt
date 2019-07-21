@@ -3,7 +3,7 @@
  *
  * Direct calculation with minor memoization.
  */
-fun main(args: Array<String>) {
+fun main() {
 
   val seqs: Array<Int> = Array(1_000_000) { 0 }
 

@@ -1,5 +1,7 @@
+import kotlin.math.sqrt
+
 /** https://projecteuler.net/problem=12 the brutest of force */
-fun main(args: Array<String>) {
+fun main() {
   // 20000 is an arbitrary bound, all that matters is that it
   // exceeds the value of the solution
   for (i in 2..20000) {
@@ -21,4 +23,4 @@ private fun factorCount(n: Long): Int {
 }
 
 infix fun Long.isMultipleOf(n: Int) = this % n == 0.toLong()
-fun intSqrt(n: Long) : Int = Math.sqrt(n.toDouble()).toInt()
+fun intSqrt(n: Long) : Int = sqrt(n.toDouble()).toInt()

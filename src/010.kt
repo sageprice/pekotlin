@@ -1,6 +1,6 @@
 /** https://projecteuler.net/problem=10 */
-fun main(args: Array<String>) {
-  val ps: Array<Boolean> = Array(2_000_000, { _ -> true })
+fun main() {
+  val ps: Array<Boolean> = Array(2_000_000) { true }
   ps[0] = false
   ps[1] = false
 

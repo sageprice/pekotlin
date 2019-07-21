@@ -3,7 +3,7 @@ import lib.incrementValueForKey
 /**
  * https://projecteuler.net/problem=650
  */
-fun main(args: Array<String>) {
+fun main() {
 
 //  val lim = 20000
   val lim = 100
@@ -24,7 +24,7 @@ fun main(args: Array<String>) {
 
 private fun getPrimeFactorizations(lim: Int): MutableList<HashMap<Int, Int>> {
   val factorMaps: MutableList<HashMap<Int, Int>> = MutableList(lim) { HashMap<Int, Int>() }
-  val nums = MutableList(lim + 1) { i -> i }
+  val nums = (0..lim).toMutableList()
 
   for (i in 2..lim) {
     for (n in i..lim step i) {
@@ -39,10 +39,10 @@ private fun getPrimeFactorizations(lim: Int): MutableList<HashMap<Int, Int>> {
 }
 
 private fun nextB(b0: Map<Int, Int>, n: Int, factorizations: List<Map<Int, Int>>): Map<Int, Int> {
-  val result = HashMap<Int, Int>(b0)
-  factorizations[n - 1].forEach { f, p -> result.incrementValueForKey(f, n * p) }
+  val result = HashMap(b0)
+  factorizations[n - 1].forEach { (f, p) -> result.incrementValueForKey(f, n * p) }
   for (i in 2..n) {
-    factorizations[i - 1].forEach { f, p -> result.incrementValueForKey(f, -p) }
+    factorizations[i - 1].forEach { (f, p) -> result.incrementValueForKey(f, -p) }
   }
   return result
 }

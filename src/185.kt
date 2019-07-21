@@ -17,7 +17,7 @@ import kotlin.math.abs
  *
  * Due to the random nature of this program, it runs pretty slowly
  */
-fun main(args: Array<String>) {
+fun main() {
 
   val wordScores: List<WordScore> = listOf(
       WordScore("5616185650518293", 2),

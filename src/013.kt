@@ -1,7 +1,7 @@
 import java.math.BigInteger
 
 /** https://projecteuler.net/problem=13 bless interop */
-fun main(args: Array<String>) {
+fun main() {
   print(
       numList.split("\n")
           .map(::BigInteger) // Big numbers are big

@@ -1,5 +1,5 @@
 /** https://projecteuler.net/problem=8 */
-fun main(args: Array<String>) {
+fun main() {
   var best = 0L
   for (i in 0..(longStr.length - 13)) {
     // Going straight from char to int returns the ASCII index, so convert to

@@ -1,5 +1,5 @@
 /** Solution to Project Euler problem 1 in Kotlin. */
-fun main(args: Array<String>) {
+fun main() {
   val limit = 999
   // Brute forcey
   println((1..limit)

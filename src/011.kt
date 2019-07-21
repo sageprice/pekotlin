@@ -1,5 +1,7 @@
+import kotlin.math.max
+
 /** https://projecteuler.net/problem=11 done using direct calculation*/
-fun main(args: Array<String>) {
+fun main() {
 
   // Transform string into integer grid.
   val grid: List<List<Int>> =
@@ -11,22 +13,22 @@ fun main(args: Array<String>) {
   for (i in 0 until grid.size) {
     (0 until grid[i].size - 3)
         .asSequence()
-        .map { grid[i].subList(it, it + 3).reduceRight({ a, b -> a * b }) }
-        .forEach { a = Math.max(it, a) }
+        .map { grid[i].subList(it, it + 3).reduceRight { a, b -> a * b } }
+        .forEach { a = max(it, a) }
   }
   // Diagonal down right 4
   for (i in 0..grid.size - 4) {
     (0 until grid[i].size - 3)
         .asSequence()
         .map { grid[i][it] * grid[i + 1][it + 1] * grid[i + 2][it + 2] * grid[i + 3][it + 3] }
-        .forEach { a = Math.max(it, a) }
+        .forEach { a = max(it, a) }
   }
   // Vertical 4
   for (i in 0..grid.size - 4) {
     (0 until grid[i].size)
         .asSequence()
         .map { grid[i][it] * grid[i + 1][it] * grid[i + 2][it] * grid[i + 3][it] }
-        .forEach { a = Math.max(it, a) }
+        .forEach { a = max(it, a) }
   }
   // Diagonal down left 4
   for (i in 3 until grid.size - 3) {
@@ -38,7 +40,7 @@ fun main(args: Array<String>) {
               grid[i + 2][it - 2] *
               grid[i + 3][it - 3]
         }
-        .forEach { a = Math.max(it, a) }
+        .forEach { a = max(it, a) }
   }
   println(a)
 }

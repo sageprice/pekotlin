@@ -1,5 +1,5 @@
 /** Returns the solution to https://projecteuler.net/problem=2 . */
-fun main(args: Array<String>) {
+fun main() {
   var f1 = 1
   var f2 = 1
   var t: Int
