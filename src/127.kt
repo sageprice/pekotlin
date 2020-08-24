@@ -26,7 +26,7 @@ fun main() {
 fun gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
 
 
-// Using a similar approach to the Sieve of Erastosthenes.
+// Using a similar approach to the Sieve of Eratosthenes.
 fun getRads(n: Int): List<Long> {
   val factors = Array(n+1) { mutableSetOf<Long>()}
   factors[0].add(0)
