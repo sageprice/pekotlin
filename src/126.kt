@@ -57,7 +57,7 @@ fun main() {
       }
     }
   }
-  println(lsums.entries.sortedBy { x -> x.key }.filter {it.value == 1000 }.minBy { it.key }?.key)
+  println(lsums.entries.sortedBy { x -> x.key }.filter {it.value == 1000 }.minByOrNull { it.key }?.key)
 }
 
 fun getTriangularNumbers(n: Long): List<Long> {
